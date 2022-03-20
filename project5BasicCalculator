@@ -1,0 +1,50 @@
+public class Calculator{
+  // This calculator adds, substracts, multiplies, divides two integers and applies the modulo operator on two integers.
+  
+  //constructor
+  public Calculator(){
+
+  }
+
+  //methods
+  //adds two variables
+  public int add(int a, int b){
+    int addition = a + b;
+    return addition;
+  }
+  //subtracts two variables
+  public void subtract(int a, int b){
+    int subtraction = a - b;
+    System.out.println(+a+ " minus " +b+ " is equal to "+subtraction+".");
+  } 
+  //multiplies two variables
+   public void multiply(int a, int b){
+    int multiplication = a * b;
+    System.out.println(+a+ " multiplied by " +b+ " is equal to "+multiplication+".");
+  }
+  //divides two variables
+  public void divide(int a, int b){
+    int division = a / b;
+    System.out.println(+a+ " divided by " +b+ " is equal to "+division+".");
+  }
+  //modulo of two variables
+  public int modulo(int a, int b){
+    int modulus = a % b;
+    return modulus;
+  }
+
+  // main method
+  public static void main(String[] args){
+    Calculator myCalculator = new Calculator();
+    // prints sum
+    System.out.println("The sum is "+myCalculator.add(45,11)+".");
+     // prints substraction
+    myCalculator.subtract(5,7);
+     // prints multiplocation
+    myCalculator.multiply(4,9);
+     // prints division
+    myCalculator.divide(88,9);
+     // prints modulo
+    System.out.println("The modulo is " +myCalculator.modulo(49,13)+".");
+  }
+}
