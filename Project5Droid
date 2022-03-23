@@ -1,0 +1,37 @@
+public class Droid{
+  //instance fields
+  int batteryLevel = 100;
+  String name;
+
+  //constructor
+  public Droid(String droidName){
+    name = droidName;
+  }
+
+  //methods
+  //droid says hello
+  public String toString(){
+    return "Hello, I'm the droid: "+name;
+  }
+  //droid performs task
+  public void performTask(String task){
+    System.out.println(name+" is performing task: "+task);
+    batteryLevel = batteryLevel-10;
+    System.out.println("After performing this task, "+name+"'s battery level is: "+batteryLevel);
+  }
+
+  //main method
+  public static void main(String [] args){
+    Droid Codey = new Droid("Tiba");
+    //droid says hello
+    System.out.println(Codey);
+    // droid's initial battery level
+    System.out.println(Codey.name+"'s initial battery level is: "+Codey.batteryLevel);
+    //droid performs task dancing
+    Codey.performTask("dancing");
+    //droid performs task singing
+    Codey.performTask("singing");
+    //droid performs task cleaning
+    Codey.performTask("cleaning");
+  }
+}
