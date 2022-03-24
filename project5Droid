@@ -7,17 +7,18 @@ public class Droid{
   public Droid(String droidName){
     name = droidName;
   }
+  //sets initial battery level
+    public void setBatteryLevel(){
+    batteryLevel = 100;
+    System.out.println(name+"'s initial battery level is: "+batteryLevel);
+  }
 
   //methods
   //droid says hello
   public String toString(){
     return "Hello, I'm the droid: "+name;
   }
-  //sets initial battery level
-    public void setBatteryLevel(){
-    batteryLevel = 100;
-    System.out.println(name+"'s initial battery level is: "+batteryLevel);
-  }
+
   //droid performs task
   public void performTask(String task){
     System.out.println(name+" is performing task: "+task);
@@ -27,16 +28,27 @@ public class Droid{
 
   //main method
   public static void main(String [] args){
-    Droid Codey = new Droid("Tiba");
-    //droid says hello
+    Droid Codey = new Droid("Codey");
+    //droid 1 says hello
     System.out.println(Codey);
-    // droid's initial battery level
+    // droid 1's initial battery level
     Codey.setBatteryLevel();
-    //droid performs task dancing
+    //droid 1 performs task dancing
     Codey.performTask("dancing");
-    //droid performs task singing
+    //droid 1 performs task singing
     Codey.performTask("singing");
-    //droid performs task cleaning
+    //droid 1 performs task cleaning
     Codey.performTask("cleaning");
+    Droid Tiba = new Droid("Tiba");
+    //droid 2 says hello
+    System.out.println(Tiba);
+    // droid 2's initial battery level
+    Tiba.setBatteryLevel();
+    //droid 2 performs task dancing
+    Tiba.performTask("dancing");
+    //droid 2 performs task singing
+    Tiba.performTask("singing");
+    //droid 2 performs task cleaning
+    Tiba.performTask("cleaning");
   }
 }
