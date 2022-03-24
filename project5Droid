@@ -1,6 +1,6 @@
 public class Droid{
   //instance fields
-  int batteryLevel = 100;
+  int batteryLevel;
   String name;
 
   //constructor
@@ -12,6 +12,11 @@ public class Droid{
   //droid says hello
   public String toString(){
     return "Hello, I'm the droid: "+name;
+  }
+  //sets initial battery level
+    public void setBatteryLevel(){
+    batteryLevel = 100;
+    System.out.println(name+"'s initial battery level is: "+batteryLevel);
   }
   //droid performs task
   public void performTask(String task){
@@ -26,7 +31,7 @@ public class Droid{
     //droid says hello
     System.out.println(Codey);
     // droid's initial battery level
-    System.out.println(Codey.name+"'s initial battery level is: "+Codey.batteryLevel);
+    Codey.setBatteryLevel();
     //droid performs task dancing
     Codey.performTask("dancing");
     //droid performs task singing
