@@ -1,0 +1,45 @@
+public class Continents {
+	//prints continent and largest city on continent
+String continent;
+
+public Continents(String inputContinent) {
+  continent = inputContinent;
+}
+
+public void theContinent(){
+switch(continent){
+      case "North America":
+      System.out.println("The largest city in North America is Mexico City, Mexico");
+        break;
+      case "South America":
+      System.out.println("The largest city in South America is Sao Paulo, Brazil");
+        break;
+      case "Europe":
+      System.out.println("The largest city in Europe is Moscow, Russia");
+        break;
+      case "Africa":
+      System.out.println("The largest city in Africa is Lagos, Nigeria");
+        break;
+      case "Asia":
+      System.out.println("The largest city in Asia is Shanghai, China");
+        break;
+      case "Australia":
+      System.out.println("The largest city in Australia is Sydney, Australia");
+        break;
+      case "Antarctica":
+      System.out.println("The largest city in Antarctica is McMurdo Station, US");
+        break;
+      default:
+      System.out.println("Undefined continent!");
+    }
+}
+
+  public static void main(String[] args) {
+    Continents northAmerica = new Continents("North America");
+    northAmerica.theContinent();
+    Continents southAmerica = new Continents("South America");
+    southAmerica.theContinent();
+      Continents europe = new Continents("Europe");
+    europe.theContinent();	
+	}
+}
