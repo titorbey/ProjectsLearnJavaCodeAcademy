@@ -1,0 +1,34 @@
+public class CarLoan {
+	int carLoan;
+  int loanLength;
+  int interestRate;
+  int downPayment;
+  
+//defines CarLoan
+public CarLoan(int loan, int length, int interest, int payment){
+  carLoan = loan;
+  loanLength = length;
+  interestRate = interest;
+  downPayment = payment;
+}
+
+//checks if CarLoan is valid + calculates monthly payment
+  public void carPayment(){
+if(loanLength <= 0 || interestRate <= 0){
+      System.out.println("Error! You must take out a valid car loan.");
+    } else if(downPayment > carLoan){
+      System.out.println("The car can be paid in full.");
+    } else {
+      int remainingBalance = carLoan - downPayment;
+      int months = loanLength * 12;
+      int monthlyBalance = remainingBalance / months;
+      int interest = (monthlyBalance * interestRate) / 100;
+      int monthlyPayment = monthlyBalance + interest;  
+      System.out.println("The monthly payment is: "+monthlyPayment);
+    }
+  }
+  public static void main(String[] args) {
+    CarLoan Sebi = new CarLoan(10000, 3, 5, 2000);
+    Sebi.carPayment();
+  }
+}
