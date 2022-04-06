@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+class Playlist {
+  
+  public static void main(String[] args) {
+  //creates new ArrayList
+  ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
+
+  //adds songs to playlist
+  desertIslandPlaylist.add("Let it go");
+  desertIslandPlaylist.add("How far I'll go");
+  desertIslandPlaylist.add("Colours of the wind");
+  desertIslandPlaylist.add("Hakuna matata");
+  desertIslandPlaylist.add("Can you feel the love tonight");
+  desertIslandPlaylist.add("For the first time in forever");
+
+  //prints playlist
+  System.out.println("Playlist: "+desertIslandPlaylist);
+
+  //prints number of songs
+  System.out.println("Number of songs: "+desertIslandPlaylist.size());
+
+  //removes song from playlist
+  desertIslandPlaylist.remove(5);
+  
+  //prints playlist
+  System.out.println("Playlist: "+desertIslandPlaylist);
+
+  //prints number of songs
+  System.out.println("Number of songs: "+desertIslandPlaylist.size());
+ 
+  
+  //gets indices of songs
+  int indexA = desertIslandPlaylist.indexOf("Hakuna matata");
+  int indexB = desertIslandPlaylist.indexOf("Let it go");
+
+  //prints indices of songs
+  System.out.println("Index Hakuna matata: "+indexA);
+  System.out.println("Index Let it go: "+indexB);
+
+  //swaps songs
+  desertIslandPlaylist.set(indexA, "Let it go");
+  desertIslandPlaylist.set(indexB, "Hakuna matata");
+
+  //prints playlist
+  System.out.println("New playlist: "+desertIslandPlaylist);
+
+ }
+}
