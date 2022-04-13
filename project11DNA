@@ -1,0 +1,35 @@
+public class DNA{
+  /* Checks if there is a protein in a strand of DNA. Conditions for a protein are:
+  - It begins with a start codon ATG.
+  - It ends with a stop codon TGA.
+  - In between, the number of nucleotides is divisible by 3.*/
+  
+  public static void main(String[] args){
+    // DNA strands to test the program
+    String dna1 = "ATGCGATACGCTTGA";
+    String dna2 = "ATGCGATACGTGA";
+    String dna3 ="ATTAATATGTACTGA";
+
+    String dna = dna2;
+
+    // prints the length of the DNA string
+    int dnaLength = dna.length();
+    System.out.println("The length of the DNA string is: "+dnaLength);
+
+    // prints the index where the startCodon begins
+    int startCodon = dna.indexOf("ATG");
+    System.out.println("Index startcodon: "+ startCodon);
+
+    // prints the index where the stopCodon begins
+    int stopCodon = dna.indexOf("TGA");
+    System.out.println("Index stopcodon: "+stopCodon);
+    
+    //finds out if there is a protein and prints the protein
+    if ((startCodon != -1) && (stopCodon != -1) && ((stopCodon-startCodon)%3 == 0)){
+      String protein = dna.substring(startCodon,stopCodon+3);
+      System.out.println("Protein in the DNA-string: "+protein);
+    } else {
+      System.out.println("There is no protein in the DNA-string");
+    }
+  }
+}
