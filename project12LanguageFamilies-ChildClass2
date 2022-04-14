@@ -1,0 +1,10 @@
+class SinoTibetan extends Language{
+
+  //constructor
+  SinoTibetan(String inputName, int inputNumSpeakers){
+    super(inputName, inputNumSpeakers, "Asia", "subject-object-verb");
+    if (inputName.contains("Chinese")){
+      this.wordOrder = "subject-verb-object";
+    }
+  }
+}
